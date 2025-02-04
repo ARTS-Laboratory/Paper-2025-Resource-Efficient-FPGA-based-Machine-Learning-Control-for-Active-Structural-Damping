@@ -92,7 +92,6 @@
 				<Item Name="DU64_U32AddWithOverflow.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/DU64_U32AddWithOverflow.vi"/>
 				<Item Name="DU64_U32SubtractWithBorrow.vi" Type="VI" URL="/&lt;vilib&gt;/Waveform/TSOps.llb/DU64_U32SubtractWithBorrow.vi"/>
 				<Item Name="Dynamic To Waveform Array.vi" Type="VI" URL="/&lt;vilib&gt;/express/express shared/transition.llb/Dynamic To Waveform Array.vi"/>
-				<Item Name="Error Cluster From Error Code.vi" Type="VI" URL="/&lt;vilib&gt;/Utility/error.llb/Error Cluster From Error Code.vi"/>
 				<Item Name="ex_AllChanInfo.ctl" Type="VI" URL="/&lt;vilib&gt;/express/express shared/ExFile.llb/ex_AllChanInfo.ctl"/>
 				<Item Name="ex_CalcNewX0.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/ExFileReadBlock.llb/ex_CalcNewX0.vi"/>
 				<Item Name="ex_CheckEOF.vi" Type="VI" URL="/&lt;vilib&gt;/express/express input/ExFileReadBlock.llb/ex_CheckEOF.vi"/>
@@ -197,17 +196,14 @@
 			<Item Name="lvStorage.dll" Type="Document" URL="lvStorage.dll">
 				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
 			</Item>
-			<Item Name="NiFpgaLv.dll" Type="Document" URL="NiFpgaLv.dll">
-				<Property Name="NI.PreserveRelativePath" Type="Bool">true</Property>
-			</Item>
 		</Item>
 		<Item Name="Build Specifications" Type="Build"/>
 	</Item>
-	<Item Name="NI-cRIO-9054-020DAAA6" Type="RT CompactRIO">
-		<Property Name="alias.name" Type="Str">NI-cRIO-9054-020DAAA6</Property>
-		<Property Name="alias.value" Type="Str">169.254.111.21</Property>
-		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,79DE;</Property>
-		<Property Name="crio.ControllerPID" Type="Str">79DE</Property>
+	<Item Name="NI-cRIO-9035-01B68DEF" Type="RT CompactRIO">
+		<Property Name="alias.name" Type="Str">NI-cRIO-9035-01B68DEF</Property>
+		<Property Name="alias.value" Type="Str">172.22.11.2</Property>
+		<Property Name="CCSymbols" Type="Str">TARGET_TYPE,RT;OS,Linux;CPU,x64;DeviceCode,77DB;</Property>
+		<Property Name="crio.ControllerPID" Type="Str">77DB</Property>
 		<Property Name="host.ResponsivenessCheckEnabled" Type="Bool">true</Property>
 		<Property Name="host.ResponsivenessCheckPingDelay" Type="UInt">5000</Property>
 		<Property Name="host.ResponsivenessCheckPingTimeout" Type="UInt">1000</Property>
@@ -257,24 +253,20 @@
 		<Item Name="Chassis" Type="cRIO Chassis">
 			<Property Name="crio.ProgrammingMode" Type="Str">fpga</Property>
 			<Property Name="crio.ResourceID" Type="Str">RIO0</Property>
-			<Property Name="crio.Type" Type="Str">cRIO-9054</Property>
+			<Property Name="crio.Type" Type="Str">cRIO-9035</Property>
 			<Property Name="NI.SortType" Type="Int">3</Property>
 			<Item Name="Real-Time Scan Resources" Type="Module Container">
 				<Property Name="crio.ModuleContainerType" Type="Str">crio.RSIModuleContainer</Property>
 			</Item>
-			<Item Name="Real-Time Resources" Type="Module Container">
-				<Property Name="crio.ModuleContainerType" Type="Str">crio.DAQModuleContainer</Property>
-			</Item>
 			<Item Name="FPGA Target" Type="FPGA Target">
 				<Property Name="AutoRun" Type="Bool">false</Property>
-				<Property Name="configString.guid" Type="Str">{0178C5C8-7919-435A-B788-46FD3DC50C7F}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig6;0;ReadMethodType=bool{01B73BAA-1160-49A0-83F4-F4175C6BD985}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig2;0;ReadMethodType=bool;WriteMethodType=bool{0D9B92A6-FFE3-435D-9A65-BEDE9D703C00}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time;0;ReadMethodType=u64{1661F9E6-9C03-4521-A1F6-3F0A9901BED8}"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{19BD52E9-7C79-4015-8B64-C92558911E1A}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/USER FPGA LED;0;ReadMethodType=bool;WriteMethodType=bool{1A28F8EC-24CF-4855-BC63-D6E3F743AC09}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig7;0;ReadMethodType=bool{26EFB100-7800-4105-8DC8-26B9A04EE43A}ResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{2CA0E18D-E44F-4B26-A043-15A770E093B4}NumberOfSyncRegistersForReadInProject=Auto;resource=/System Watchdog Expired;0;ReadMethodType=bool{3050C618-1748-417A-80B6-F5B4AA313492}"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{40FE6A8F-0DCB-45FC-9DFB-CE088CB39A3F}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Source;0;ReadMethodType=Targets\NI\FPGA\RIO\CompactRIO\Sync\SyncSource.ctl{4E95EB19-AB4E-4B04-B0EE-FF385CA30CCA}NumberOfSyncRegistersForReadInProject=Auto;resource=/12.8 MHz Timebase;0;ReadMethodType=bool{54B49F7F-7692-4E80-B92E-610D385B1594}resource=/Reset RT App;0;WriteMethodType=bool{5BCAF0B1-0CAE-4F20-9762-3F060C02DD19}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig1;0;ReadMethodType=bool;WriteMethodType=bool{5C9A33A2-86EB-48ED-8627-E43D1B001698}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig4;0;ReadMethodType=bool{70FD3CEE-371A-48E8-AFC4-7DD1E6D9C864}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig0;0;ReadMethodType=bool;WriteMethodType=bool{76DEA06D-FC11-4479-8B89-B178F982568E}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Synchronization Fault;0;ReadMethodType=bool{8FFF0A47-ACD8-464A-8C58-87399F95CE06}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference;0;ReadMethodType=i32{98AE9E3F-C3BA-4344-BBEB-D3BD3D33E451}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig5;0;ReadMethodType=bool{A00E4238-C7B8-4F58-9EB5-465A191AA791}NumberOfSyncRegistersForReadInProject=Auto;resource=/13.1072 MHz Timebase;0;ReadMethodType=bool{AF88CC6E-0000-4CFA-BEB4-7DF493EAEF77}resource=/Chassis Temperature;0;ReadMethodType=i16{BB544771-04E6-4636-B374-C266421E4BBB}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig3;0;ReadMethodType=bool;WriteMethodType=bool{CAE08C00-2EFA-473F-8FFE-F647E4E7E46A}resource=/Scan Clock;0;ReadMethodType=bool{CEBAEF45-BBEE-4B14-8D45-8F147AA877C2}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference Valid;0;ReadMethodType=bool{DBBDAB4C-2DD6-46E2-BF0C-4043B9E72130}resource=/System Reset;0;ReadMethodType=bool;WriteMethodType=bool{E76FC9CD-B558-427B-8D8B-794FF06F13D8}resource=/Sleep;0;ReadMethodType=bool;WriteMethodType=bool{F9F162E5-4A99-4B4B-9EC5-E6E1F7E58E1C}NumberOfSyncRegistersForReadInProject=Auto;resource=/10 MHz Timebase;0;ReadMethodType=boolcRIO-9054/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9054FPGA_TARGET_FAMILYARTIX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]</Property>
-				<Property Name="configString.name" Type="Str">10 MHz TimebaseNumberOfSyncRegistersForReadInProject=Auto;resource=/10 MHz Timebase;0;ReadMethodType=bool12.8 MHz TimebaseNumberOfSyncRegistersForReadInProject=Auto;resource=/12.8 MHz Timebase;0;ReadMethodType=bool13.1072 MHz TimebaseNumberOfSyncRegistersForReadInProject=Auto;resource=/13.1072 MHz Timebase;0;ReadMethodType=bool40 MHz Onboard ClockResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Chassis Temperatureresource=/Chassis Temperature;0;ReadMethodType=i16cRIO_Trig0ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig0;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig1ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig1;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig2ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig2;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig3ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig3;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig4NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig4;0;ReadMethodType=boolcRIO_Trig5NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig5;0;ReadMethodType=boolcRIO_Trig6NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig6;0;ReadMethodType=boolcRIO_Trig7NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig7;0;ReadMethodType=boolcRIO-9054/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9054FPGA_TARGET_FAMILYARTIX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]Input FIFO"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Offset from Time Reference ValidNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference Valid;0;ReadMethodType=boolOffset from Time ReferenceNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference;0;ReadMethodType=i32Output FIFO"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Reset RT Appresource=/Reset RT App;0;WriteMethodType=boolScan Clockresource=/Scan Clock;0;ReadMethodType=boolSleepresource=/Sleep;0;ReadMethodType=bool;WriteMethodType=boolSystem Resetresource=/System Reset;0;ReadMethodType=bool;WriteMethodType=boolSystem Watchdog ExpiredNumberOfSyncRegistersForReadInProject=Auto;resource=/System Watchdog Expired;0;ReadMethodType=boolTime SourceNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Source;0;ReadMethodType=Targets\NI\FPGA\RIO\CompactRIO\Sync\SyncSource.ctlTime Synchronization FaultNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Synchronization Fault;0;ReadMethodType=boolTimeNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time;0;ReadMethodType=u64USER FPGA LEDArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/USER FPGA LED;0;ReadMethodType=bool;WriteMethodType=bool</Property>
-				<Property Name="Mode" Type="Int">0</Property>
-				<Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">cRIO-9054/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9054FPGA_TARGET_FAMILYARTIX7TARGET_TYPEFPGA</Property>
+				<Property Name="configString.guid" Type="Str">{0CA660DE-E523-4599-B09E-431FDDB734BE}"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{23A067C1-DD0D-42D2-A12F-8C6CD3908391}"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{25903BA5-9189-4EB8-9975-B2788C288A3D}resource=/Chassis Temperature;0;ReadMethodType=i16{2B4430D7-6A4A-43CF-8233-6892291EECAF}ResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{5068DBE0-9DB1-4240-9236-4C954CFF1BF4}resource=/Sleep;0;ReadMethodType=bool;WriteMethodType=bool{80DFE2B7-EF48-4CFA-BACB-0A53007D53AC}resource=/USER FPGA LED;0;ReadMethodType=u8;WriteMethodType=u8{883218DC-AE9E-4DB9-9546-1C25E8A386CC}NumberOfSyncRegistersForReadInProject=0;resource=/USER Push Button;0;ReadMethodType=bool{D0EFE605-1226-4396-B34A-B48A1906E5D0}resource=/System Reset;0;ReadMethodType=bool;WriteMethodType=bool{E5FAFB06-B175-4522-AC74-C58F9A06BD2F}resource=/Scan Clock;0;ReadMethodType=boolcRIO-9035/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9035FPGA_TARGET_FAMILYKINTEX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]</Property>
+				<Property Name="configString.name" Type="Str">40 MHz Onboard ClockResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Chassis Temperatureresource=/Chassis Temperature;0;ReadMethodType=i16cRIO-9035/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9035FPGA_TARGET_FAMILYKINTEX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]Input FIFO"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Output FIFO"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Scan Clockresource=/Scan Clock;0;ReadMethodType=boolSleepresource=/Sleep;0;ReadMethodType=bool;WriteMethodType=boolSystem Resetresource=/System Reset;0;ReadMethodType=bool;WriteMethodType=boolUSER FPGA LEDresource=/USER FPGA LED;0;ReadMethodType=u8;WriteMethodType=u8USER Push ButtonNumberOfSyncRegistersForReadInProject=0;resource=/USER Push Button;0;ReadMethodType=bool</Property>
+				<Property Name="NI.LV.FPGA.CompileConfigString" Type="Str">cRIO-9035/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9035FPGA_TARGET_FAMILYKINTEX7TARGET_TYPEFPGA</Property>
 				<Property Name="NI.LV.FPGA.Version" Type="Int">6</Property>
 				<Property Name="niFpga_TopLevelVIID" Type="Path">/C/Users/User/Documents/TJR FPGA/SPIE25/PD/PD_Target.vi</Property>
 				<Property Name="Resource Name" Type="Str">RIO0</Property>
-				<Property Name="Target Class" Type="Str">cRIO-9054</Property>
+				<Property Name="Target Class" Type="Str">cRIO-9035</Property>
 				<Property Name="Top-Level Timing Source" Type="Str">40 MHz Onboard Clock</Property>
 				<Property Name="Top-Level Timing Source Is Default" Type="Bool">true</Property>
 				<Item Name="Chassis I/O" Type="Folder">
@@ -285,7 +277,7 @@
    </Attribute>
 </AttributeSet>
 </Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{AF88CC6E-0000-4CFA-BEB4-7DF493EAEF77}</Property>
+						<Property Name="FPGA.PersistentID" Type="Str">{25903BA5-9189-4EB8-9975-B2788C288A3D}</Property>
 					</Item>
 					<Item Name="Sleep" Type="Elemental IO">
 						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
@@ -294,7 +286,7 @@
    </Attribute>
 </AttributeSet>
 </Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{E76FC9CD-B558-427B-8D8B-794FF06F13D8}</Property>
+						<Property Name="FPGA.PersistentID" Type="Str">{5068DBE0-9DB1-4240-9236-4C954CFF1BF4}</Property>
 					</Item>
 					<Item Name="System Reset" Type="Elemental IO">
 						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
@@ -303,7 +295,28 @@
    </Attribute>
 </AttributeSet>
 </Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{DBBDAB4C-2DD6-46E2-BF0C-4043B9E72130}</Property>
+						<Property Name="FPGA.PersistentID" Type="Str">{D0EFE605-1226-4396-B34A-B48A1906E5D0}</Property>
+					</Item>
+					<Item Name="USER FPGA LED" Type="Elemental IO">
+						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
+   <Attribute name="resource">
+   <Value>/USER FPGA LED</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+						<Property Name="FPGA.PersistentID" Type="Str">{80DFE2B7-EF48-4CFA-BACB-0A53007D53AC}</Property>
+					</Item>
+					<Item Name="USER Push Button" Type="Elemental IO">
+						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
+   <Attribute name="NumberOfSyncRegistersForReadInProject">
+   <Value>0</Value>
+   </Attribute>
+   <Attribute name="resource">
+   <Value>/USER Push Button</Value>
+   </Attribute>
+</AttributeSet>
+</Property>
+						<Property Name="FPGA.PersistentID" Type="Str">{883218DC-AE9E-4DB9-9546-1C25E8A386CC}</Property>
 					</Item>
 					<Item Name="Scan Clock" Type="Elemental IO">
 						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
@@ -312,270 +325,11 @@
    </Attribute>
 </AttributeSet>
 </Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{CAE08C00-2EFA-473F-8FFE-F647E4E7E46A}</Property>
-					</Item>
-					<Item Name="Reset RT App" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="resource">
-   <Value>/Reset RT App</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{54B49F7F-7692-4E80-B92E-610D385B1594}</Property>
-					</Item>
-					<Item Name="System Watchdog Expired" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/System Watchdog Expired</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{2CA0E18D-E44F-4B26-A043-15A770E093B4}</Property>
-					</Item>
-					<Item Name="12.8 MHz Timebase" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/12.8 MHz Timebase</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{4E95EB19-AB4E-4B04-B0EE-FF385CA30CCA}</Property>
-					</Item>
-					<Item Name="13.1072 MHz Timebase" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/13.1072 MHz Timebase</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{A00E4238-C7B8-4F58-9EB5-465A191AA791}</Property>
-					</Item>
-					<Item Name="10 MHz Timebase" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/10 MHz Timebase</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{F9F162E5-4A99-4B4B-9EC5-E6E1F7E58E1C}</Property>
-					</Item>
-					<Item Name="USER FPGA LED" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="ArbitrationForOutputData">
-   <Value>NeverArbitrate</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForOutputData">
-   <Value>1</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/USER FPGA LED</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{19BD52E9-7C79-4015-8B64-C92558911E1A}</Property>
-					</Item>
-				</Item>
-				<Item Name="cRIO_Trig" Type="Folder">
-					<Item Name="cRIO_Trig0" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="ArbitrationForOutputData">
-   <Value>NeverArbitrate</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForOutputData">
-   <Value>1</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig0</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{70FD3CEE-371A-48E8-AFC4-7DD1E6D9C864}</Property>
-					</Item>
-					<Item Name="cRIO_Trig1" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="ArbitrationForOutputData">
-   <Value>NeverArbitrate</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForOutputData">
-   <Value>1</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig1</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{5BCAF0B1-0CAE-4F20-9762-3F060C02DD19}</Property>
-					</Item>
-					<Item Name="cRIO_Trig2" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="ArbitrationForOutputData">
-   <Value>NeverArbitrate</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForOutputData">
-   <Value>1</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig2</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{01B73BAA-1160-49A0-83F4-F4175C6BD985}</Property>
-					</Item>
-					<Item Name="cRIO_Trig3" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="ArbitrationForOutputData">
-   <Value>NeverArbitrate</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForOutputData">
-   <Value>1</Value>
-   </Attribute>
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig3</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{BB544771-04E6-4636-B374-C266421E4BBB}</Property>
-					</Item>
-					<Item Name="cRIO_Trig4" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig4</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{5C9A33A2-86EB-48ED-8627-E43D1B001698}</Property>
-					</Item>
-					<Item Name="cRIO_Trig5" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig5</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{98AE9E3F-C3BA-4344-BBEB-D3BD3D33E451}</Property>
-					</Item>
-					<Item Name="cRIO_Trig6" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig6</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{0178C5C8-7919-435A-B788-46FD3DC50C7F}</Property>
-					</Item>
-					<Item Name="cRIO_Trig7" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>Auto</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/cRIO_Trig/cRIO_Trig7</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{1A28F8EC-24CF-4855-BC63-D6E3F743AC09}</Property>
-					</Item>
-				</Item>
-				<Item Name="Time Synchronization" Type="Folder">
-					<Item Name="Time" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>0</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/Time Synchronization/Time</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{0D9B92A6-FFE3-435D-9A65-BEDE9D703C00}</Property>
-					</Item>
-					<Item Name="Time Source" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>0</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/Time Synchronization/Time Source</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{40FE6A8F-0DCB-45FC-9DFB-CE088CB39A3F}</Property>
-					</Item>
-					<Item Name="Time Synchronization Fault" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>0</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/Time Synchronization/Time Synchronization Fault</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{76DEA06D-FC11-4479-8B89-B178F982568E}</Property>
-					</Item>
-					<Item Name="Offset from Time Reference" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>0</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/Time Synchronization/Offset from Time Reference</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{8FFF0A47-ACD8-464A-8C58-87399F95CE06}</Property>
-					</Item>
-					<Item Name="Offset from Time Reference Valid" Type="Elemental IO">
-						<Property Name="eioAttrBag" Type="Xml"><AttributeSet name="">
-   <Attribute name="NumberOfSyncRegistersForReadInProject">
-   <Value>0</Value>
-   </Attribute>
-   <Attribute name="resource">
-   <Value>/Time Synchronization/Offset from Time Reference Valid</Value>
-   </Attribute>
-</AttributeSet>
-</Property>
-						<Property Name="FPGA.PersistentID" Type="Str">{CEBAEF45-BBEE-4B14-8D45-8F147AA877C2}</Property>
+						<Property Name="FPGA.PersistentID" Type="Str">{E5FAFB06-B175-4522-AC74-C58F9A06BD2F}</Property>
 					</Item>
 				</Item>
 				<Item Name="40 MHz Onboard Clock" Type="FPGA Base Clock">
-					<Property Name="FPGA.PersistentID" Type="Str">{26EFB100-7800-4105-8DC8-26B9A04EE43A}</Property>
+					<Property Name="FPGA.PersistentID" Type="Str">{2B4430D7-6A4A-43CF-8233-6892291EECAF}</Property>
 					<Property Name="NI.LV.FPGA.BaseTSConfig" Type="Str">ResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;</Property>
 					<Property Name="NI.LV.FPGA.BaseTSConfig.Accuracy" Type="Dbl">100</Property>
 					<Property Name="NI.LV.FPGA.BaseTSConfig.ClockSignalName" Type="Str">Clk40</Property>
@@ -592,6 +346,11 @@
 					<Property Name="NI.LV.FPGA.Valid" Type="Bool">true</Property>
 					<Property Name="NI.LV.FPGA.Version" Type="Int">5</Property>
 				</Item>
+				<Item Name="PD_Target.vi" Type="VI" URL="../PD_Target.vi">
+					<Property Name="configString.guid" Type="Str">{0CA660DE-E523-4599-B09E-431FDDB734BE}"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{23A067C1-DD0D-42D2-A12F-8C6CD3908391}"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{25903BA5-9189-4EB8-9975-B2788C288A3D}resource=/Chassis Temperature;0;ReadMethodType=i16{2B4430D7-6A4A-43CF-8233-6892291EECAF}ResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{5068DBE0-9DB1-4240-9236-4C954CFF1BF4}resource=/Sleep;0;ReadMethodType=bool;WriteMethodType=bool{80DFE2B7-EF48-4CFA-BACB-0A53007D53AC}resource=/USER FPGA LED;0;ReadMethodType=u8;WriteMethodType=u8{883218DC-AE9E-4DB9-9546-1C25E8A386CC}NumberOfSyncRegistersForReadInProject=0;resource=/USER Push Button;0;ReadMethodType=bool{D0EFE605-1226-4396-B34A-B48A1906E5D0}resource=/System Reset;0;ReadMethodType=bool;WriteMethodType=bool{E5FAFB06-B175-4522-AC74-C58F9A06BD2F}resource=/Scan Clock;0;ReadMethodType=boolcRIO-9035/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9035FPGA_TARGET_FAMILYKINTEX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]</Property>
+					<Property Name="configString.name" Type="Str">40 MHz Onboard ClockResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Chassis Temperatureresource=/Chassis Temperature;0;ReadMethodType=i16cRIO-9035/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9035FPGA_TARGET_FAMILYKINTEX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]Input FIFO"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Output FIFO"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Scan Clockresource=/Scan Clock;0;ReadMethodType=boolSleepresource=/Sleep;0;ReadMethodType=bool;WriteMethodType=boolSystem Resetresource=/System Reset;0;ReadMethodType=bool;WriteMethodType=boolUSER FPGA LEDresource=/USER FPGA LED;0;ReadMethodType=u8;WriteMethodType=u8USER Push ButtonNumberOfSyncRegistersForReadInProject=0;resource=/USER Push Button;0;ReadMethodType=bool</Property>
+					<Property Name="NI.LV.FPGA.InterfaceBitfile" Type="Str">C:\Users\User\Documents\TJR FPGA\SPIE25\PD\FPGA Bitfiles\pdcontrollerproj_FPGATarget_PDTarget_jsxsBZ39VeQ.lvbitx</Property>
+				</Item>
 				<Item Name="Input FIFO" Type="FPGA FIFO">
 					<Property Name="Actual Number of Elements" Type="UInt">1029</Property>
 					<Property Name="Arbitration for Read" Type="UInt">1</Property>
@@ -604,7 +363,7 @@
 					<Property Name="fifo.projectItemValid" Type="Bool">true</Property>
 					<Property Name="fifo.valid" Type="Bool">true</Property>
 					<Property Name="fifo.version" Type="Int">13</Property>
-					<Property Name="FPGA.PersistentID" Type="Str">{3050C618-1748-417A-80B6-F5B4AA313492}</Property>
+					<Property Name="FPGA.PersistentID" Type="Str">{23A067C1-DD0D-42D2-A12F-8C6CD3908391}</Property>
 					<Property Name="Local" Type="Bool">false</Property>
 					<Property Name="Memory Type" Type="UInt">2</Property>
 					<Property Name="Number Of Elements Per Read" Type="UInt">1</Property>
@@ -625,7 +384,7 @@
 					<Property Name="fifo.projectItemValid" Type="Bool">true</Property>
 					<Property Name="fifo.valid" Type="Bool">true</Property>
 					<Property Name="fifo.version" Type="Int">13</Property>
-					<Property Name="FPGA.PersistentID" Type="Str">{1661F9E6-9C03-4521-A1F6-3F0A9901BED8}</Property>
+					<Property Name="FPGA.PersistentID" Type="Str">{0CA660DE-E523-4599-B09E-431FDDB734BE}</Property>
 					<Property Name="Local" Type="Bool">false</Property>
 					<Property Name="Memory Type" Type="UInt">2</Property>
 					<Property Name="Number Of Elements Per Read" Type="UInt">1</Property>
@@ -633,12 +392,6 @@
 					<Property Name="Requested Number of Elements" Type="UInt">1023</Property>
 					<Property Name="Type" Type="UInt">2</Property>
 					<Property Name="Type Descriptor" Type="Str">100080000000000100094009000353474c000100000000000000000000</Property>
-				</Item>
-				<Item Name="PD_Target.vi" Type="VI" URL="../PD_Target.vi">
-					<Property Name="BuildSpec" Type="Str">{D1CFED32-EFCC-4EA2-8A8C-DF583351E6E7}</Property>
-					<Property Name="configString.guid" Type="Str">{0178C5C8-7919-435A-B788-46FD3DC50C7F}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig6;0;ReadMethodType=bool{01B73BAA-1160-49A0-83F4-F4175C6BD985}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig2;0;ReadMethodType=bool;WriteMethodType=bool{0D9B92A6-FFE3-435D-9A65-BEDE9D703C00}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time;0;ReadMethodType=u64{1661F9E6-9C03-4521-A1F6-3F0A9901BED8}"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{19BD52E9-7C79-4015-8B64-C92558911E1A}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/USER FPGA LED;0;ReadMethodType=bool;WriteMethodType=bool{1A28F8EC-24CF-4855-BC63-D6E3F743AC09}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig7;0;ReadMethodType=bool{26EFB100-7800-4105-8DC8-26B9A04EE43A}ResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;{2CA0E18D-E44F-4B26-A043-15A770E093B4}NumberOfSyncRegistersForReadInProject=Auto;resource=/System Watchdog Expired;0;ReadMethodType=bool{3050C618-1748-417A-80B6-F5B4AA313492}"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"{40FE6A8F-0DCB-45FC-9DFB-CE088CB39A3F}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Source;0;ReadMethodType=Targets\NI\FPGA\RIO\CompactRIO\Sync\SyncSource.ctl{4E95EB19-AB4E-4B04-B0EE-FF385CA30CCA}NumberOfSyncRegistersForReadInProject=Auto;resource=/12.8 MHz Timebase;0;ReadMethodType=bool{54B49F7F-7692-4E80-B92E-610D385B1594}resource=/Reset RT App;0;WriteMethodType=bool{5BCAF0B1-0CAE-4F20-9762-3F060C02DD19}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig1;0;ReadMethodType=bool;WriteMethodType=bool{5C9A33A2-86EB-48ED-8627-E43D1B001698}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig4;0;ReadMethodType=bool{70FD3CEE-371A-48E8-AFC4-7DD1E6D9C864}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig0;0;ReadMethodType=bool;WriteMethodType=bool{76DEA06D-FC11-4479-8B89-B178F982568E}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Synchronization Fault;0;ReadMethodType=bool{8FFF0A47-ACD8-464A-8C58-87399F95CE06}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference;0;ReadMethodType=i32{98AE9E3F-C3BA-4344-BBEB-D3BD3D33E451}NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig5;0;ReadMethodType=bool{A00E4238-C7B8-4F58-9EB5-465A191AA791}NumberOfSyncRegistersForReadInProject=Auto;resource=/13.1072 MHz Timebase;0;ReadMethodType=bool{AF88CC6E-0000-4CFA-BEB4-7DF493EAEF77}resource=/Chassis Temperature;0;ReadMethodType=i16{BB544771-04E6-4636-B374-C266421E4BBB}ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig3;0;ReadMethodType=bool;WriteMethodType=bool{CAE08C00-2EFA-473F-8FFE-F647E4E7E46A}resource=/Scan Clock;0;ReadMethodType=bool{CEBAEF45-BBEE-4B14-8D45-8F147AA877C2}NumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference Valid;0;ReadMethodType=bool{DBBDAB4C-2DD6-46E2-BF0C-4043B9E72130}resource=/System Reset;0;ReadMethodType=bool;WriteMethodType=bool{E76FC9CD-B558-427B-8D8B-794FF06F13D8}resource=/Sleep;0;ReadMethodType=bool;WriteMethodType=bool{F9F162E5-4A99-4B4B-9EC5-E6E1F7E58E1C}NumberOfSyncRegistersForReadInProject=Auto;resource=/10 MHz Timebase;0;ReadMethodType=boolcRIO-9054/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9054FPGA_TARGET_FAMILYARTIX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]</Property>
-					<Property Name="configString.name" Type="Str">10 MHz TimebaseNumberOfSyncRegistersForReadInProject=Auto;resource=/10 MHz Timebase;0;ReadMethodType=bool12.8 MHz TimebaseNumberOfSyncRegistersForReadInProject=Auto;resource=/12.8 MHz Timebase;0;ReadMethodType=bool13.1072 MHz TimebaseNumberOfSyncRegistersForReadInProject=Auto;resource=/13.1072 MHz Timebase;0;ReadMethodType=bool40 MHz Onboard ClockResourceName=40 MHz Onboard Clock;TopSignalConnect=Clk40;ClockSignalName=Clk40;MinFreq=40000000.000000;MaxFreq=40000000.000000;VariableFreq=0;NomFreq=40000000.000000;PeakPeriodJitter=250.000000;MinDutyCycle=50.000000;MaxDutyCycle=50.000000;Accuracy=100.000000;RunTime=0;SpreadSpectrum=0;GenericDataHash=D41D8CD98F00B204E9800998ECF8427E;Chassis Temperatureresource=/Chassis Temperature;0;ReadMethodType=i16cRIO_Trig0ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig0;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig1ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig1;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig2ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig2;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig3ArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig3;0;ReadMethodType=bool;WriteMethodType=boolcRIO_Trig4NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig4;0;ReadMethodType=boolcRIO_Trig5NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig5;0;ReadMethodType=boolcRIO_Trig6NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig6;0;ReadMethodType=boolcRIO_Trig7NumberOfSyncRegistersForReadInProject=Auto;resource=/cRIO_Trig/cRIO_Trig7;0;ReadMethodType=boolcRIO-9054/Clk40/falsefalseFPGA_EXECUTION_MODEFPGA_TARGETFPGA_TARGET_CLASSCRIO_9054FPGA_TARGET_FAMILYARTIX7TARGET_TYPEFPGA/[rSeriesConfig.Begin][rSeriesConfig.End]Input FIFO"ControlLogic=0;NumberOfElements=1029;Type=1;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Input FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Offset from Time Reference ValidNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference Valid;0;ReadMethodType=boolOffset from Time ReferenceNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Offset from Time Reference;0;ReadMethodType=i32Output FIFO"ControlLogic=0;NumberOfElements=1023;Type=2;ReadArbs=Arbitrate if Multiple Requestors Only;ElementsPerRead=1;WriteArbs=Arbitrate if Multiple Requestors Only;ElementsPerWrite=1;Implementation=2;Output FIFO;DataType=100080000000000100094009000353474c000100000000000000000000;DisableOnOverflowUnderflow=FALSE"Reset RT Appresource=/Reset RT App;0;WriteMethodType=boolScan Clockresource=/Scan Clock;0;ReadMethodType=boolSleepresource=/Sleep;0;ReadMethodType=bool;WriteMethodType=boolSystem Resetresource=/System Reset;0;ReadMethodType=bool;WriteMethodType=boolSystem Watchdog ExpiredNumberOfSyncRegistersForReadInProject=Auto;resource=/System Watchdog Expired;0;ReadMethodType=boolTime SourceNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Source;0;ReadMethodType=Targets\NI\FPGA\RIO\CompactRIO\Sync\SyncSource.ctlTime Synchronization FaultNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time Synchronization Fault;0;ReadMethodType=boolTimeNumberOfSyncRegistersForReadInProject=0;resource=/Time Synchronization/Time;0;ReadMethodType=u64USER FPGA LEDArbitrationForOutputData=NeverArbitrate;NumberOfSyncRegistersForOutputData=1;NumberOfSyncRegistersForReadInProject=Auto;resource=/USER FPGA LED;0;ReadMethodType=bool;WriteMethodType=bool</Property>
-					<Property Name="NI.LV.FPGA.InterfaceBitfile" Type="Str">C:\Users\User\Documents\TJR FPGA\SPIE25\PD\FPGA Bitfiles\pdcontrollerproj_FPGATarget_PDTarget_jsxsBZ39VeQ.lvbitx</Property>
 				</Item>
 				<Item Name="Dependencies" Type="Dependencies"/>
 				<Item Name="Build Specifications" Type="Build">
@@ -678,7 +431,7 @@
 						<Property Name="SupportDownload" Type="Bool">true</Property>
 						<Property Name="SupportResourceEstimation" Type="Bool">false</Property>
 						<Property Name="TargetName" Type="Str">FPGA Target</Property>
-						<Property Name="TopLevelVI" Type="Ref">/NI-cRIO-9054-020DAAA6/Chassis/FPGA Target/PD_Target.vi</Property>
+						<Property Name="TopLevelVI" Type="Ref">/NI-cRIO-9035-01B68DEF/Chassis/FPGA Target/PD_Target.vi</Property>
 					</Item>
 				</Item>
 			</Item>
