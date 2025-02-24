@@ -1,2 +1,2 @@
-# LQG
-LabVIEW code for the linear quadratic Gaussian controller.
+# FIFO
+LabVIEW code for strictly input and ouput FIFOing.
