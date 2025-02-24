@@ -1,0 +1,27 @@
+Compilation completed successfully.
+
+Device Utilization
+---------------------------
+Total Slices: 42.5% (4353 out of 10250)
+Slice Registers: 14.0% (11500 out of 82000)
+Slice LUTs: 27.6% (11326 out of 41000)
+Block RAMs: 7.4% (10 out of 135)
+DSP48s: 2.9% (7 out of 240)
+
+Timing
+---------------------------
+40 MHz Onboard Clock: 40.00 MHz (Met MHz maximum)
+
+Compilation Time
+---------------------------
+Date submitted: 2/19/2025 2:12 PM
+Date results were retrieved: 2/19/2025 2:31 PM
+Time waiting in queue: 00:15
+Time compiling: 18:54
+- Generate Xilinx IP: 00:00
+- Synthesize - Vivado: 10:45
+- Optimize Logic: 01:16
+- Place: 02:30
+- Optimize Timing: 00:26
+- Route: 02:15
+- Generate Programming File: 01:29
