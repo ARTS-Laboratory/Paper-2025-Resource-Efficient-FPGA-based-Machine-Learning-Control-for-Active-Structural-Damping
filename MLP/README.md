@@ -1,2 +1,2 @@
 # MLP
-LabVIEW code for the multilayer perceptron controller.
+LabVIEW code for both the full and reduced size multilayer perceptron controllers.
