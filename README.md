@@ -16,16 +16,6 @@ This work is licensed under a
 ## Citation
 Cite as:
 
-@Misc{Fu_2025_DBSCAN_in_LPBF,   
-  author = {Yanzhou Fu and Austin R.J. Downey},   
-  howpublished = {GitHub},  
-  title  = {Paper-A-Study-of-Online-Melt-Pool-Plume-and-Spatter-Tracking-in-Laser-Powder-Bed-Fusion-using-DBSCAN},   
-  year   = {2025},  
-  groups = {{ARTS-L}ab},    
-  url    = {https://github.com/ARTS-Laboratory/paper-2025-DBSCAN-clustering-in-LPBF},    
-}
-
-
 @Misc{Roberts2025PaperResourceEfficient,  
   author       = {Trotter Roberts and Joud Satme and Austin Downey},  
   howpublished = {GitHub},  
