@@ -26,3 +26,11 @@ Cite as:
 }
 
 
+@Misc{Roberts2025PaperResourceEfficient,  
+  author       = {Trotter Roberts and Joud Satme and Austin Downey},  
+  howpublished = {GitHub},  
+  title        = {Paper 2025 Resource-Efficient {FPGA}-based Machine Learning Control for Active Structural Damping in Shock Environments},  
+  year         = {2025},  
+  groups       = {{ARTS-L}ab},  
+  url          = {https://github.com/ARTS-Laboratory/Paper-2025-Resource-Efficient-FPGA-based-Machine-Learning-Control-for-Active-Structural-Damping},  
+}
