@@ -187,7 +187,7 @@ targets = torch.tensor([f for _, _, _, f in real_training_data], dtype=torch.flo
 # Define loss function and optimizer
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(mlp_controller.parameters(), lr=0.001)
-epochs = 500
+epochs = 2000
 
 # Lists to store training metrics
 train_losses = []
@@ -637,7 +637,7 @@ print(f"MSE over Max-Min Range: {mse_max_min_ratio:.6f}")
 r2_mlp = r2_score(displacement_history_lqg[:, control_index], control_force_mlp)
 print(f"MLP R² Score (vs LQG): {r2_mlp:.6f}")
 
-
+print(f"Final training loss: {train_losses[-1]:.6f}")
 # %% Save As Definition
 def save_as_csv(model, save_dir):
     state_dict = model.state_dict()
